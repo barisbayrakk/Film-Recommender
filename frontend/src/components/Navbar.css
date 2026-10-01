@@ -1,0 +1,153 @@
+/* Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  justify-content: space-between;
+  transition: background 0.3s;
+}
+
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-film {
+  color: white;
+}
+
+.logo-rec {
+  color: var(--accent-red);
+}
+
+.logo-box:hover .logo-film {
+  color: #ccc;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-red);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+  transform: translateY(-1px);
+}
+
+.active {
+  font-weight: 600;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hello {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.username {
+  color: white;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.btn-login,
+.btn-register,
+.btn-logout {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.btn-login {
+  background: transparent;
+  color: white;
+}
+
+.btn-login:hover {
+  color: var(--accent-red);
+}
+
+.btn-register {
+  background: var(--accent-red);
+  color: white;
+}
+
+.btn-register:hover {
+  background: #b20710;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+}
+
+.btn-logout:hover {
+  border-color: var(--accent-red);
+  color: white;
+}

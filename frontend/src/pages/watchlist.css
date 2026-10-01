@@ -1,0 +1,271 @@
+/* Watchlist Premium Design */
+
+.watchlist-page {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  padding-bottom: 100px;
+  background-color: #0a0a0a;
+  min-height: 100vh;
+}
+
+.watchlist-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  background: linear-gradient(90deg, #fff, #bbb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* --- Sections --- */
+.watchlist-section {
+  background: #111;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid #222;
+  margin-bottom: 40px;
+}
+
+.liked-section {
+  background: linear-gradient(145deg, #1a0505 0%, #0a0a0a 100%);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.section-header-row h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+.count-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.divider {
+  height: 1px;
+  background: #222;
+  margin: 40px 0;
+}
+
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.movie-grid-item {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.movie-grid-item:hover {
+  z-index: 10;
+}
+
+.remove-movie-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 14px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+  
+}
+
+
+.movie-grid-item:hover .remove-movie-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.remove-movie-btn:hover {
+  background: #e50914;
+  transform: scale(1.1);
+}
+
+.user-rating-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(255, 193, 7, 0.9);
+  color: #000;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  z-index: 15;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+
+.create-list-section {
+  margin-bottom: 30px;
+}
+
+.section-title-small {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.create-list-form {
+  display: flex;
+  gap: 15px;
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.create-list-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.create-list-form input:focus {
+  outline: none;
+}
+
+.btn-create-list {
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-create-list:hover {
+  background: #f40612;
+}
+
+
+.collections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.collection-card {
+  background: #121212;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #2a2a2a;
+}
+
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #222;
+}
+
+.collection-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.count-pill {
+  background: #333;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #999;
+}
+
+.delete-list-btn {
+  background: transparent;
+  color: #666;
+  border: 1px solid #333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.85rem;
+}
+
+.delete-list-btn:hover {
+  background: rgba(229, 9, 20, 0.1);
+  color: #e50914;
+  border-color: #e50914;
+}
+
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #555;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px dashed #333;
+}
+
+.empty-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+.empty-list-placeholder {
+  color: #444;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+}

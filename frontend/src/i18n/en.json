@@ -1,0 +1,12 @@
+{
+    "navbar": {
+  "home": "Home",
+  "movies": "Movies",
+  "trending": "Trending",
+  "upcoming": "Upcoming",
+  "watchlist": "Watchlist",
+  "login": "Login",
+  "register": "Register"
+}
+
+}

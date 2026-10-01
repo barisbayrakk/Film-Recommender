@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "home": "Anasayfa",
+    "movies": "Filmler",
+    "trending": "Trendler",
+    "upcoming": "Yakında",
+    "watchList": "Listem",
+    "login": "Giriş",
+    "register": "Kayıt Ol"
+  }
+}

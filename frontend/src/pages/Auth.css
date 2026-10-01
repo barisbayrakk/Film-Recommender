@@ -1,0 +1,92 @@
+/* Arka plan siyah & blur */
+.auth-background {
+  width: 100%;
+  height: 100vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/8b8dbf75-6e2a-4fb7-a09e-d811390f2d8a/2ce04499-98de-451c-8c8d-5e7bac9c0ed7/TR-tr-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+    no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.auth-background::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(0.3);
+}
+
+/* Kart */
+.auth-card {
+  width: 360px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  color: white;
+  z-index: 2;
+}
+
+/* Başlık */
+.auth-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Inputlar */
+.auth-input {
+  width: 100%;
+  padding: 14px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: white;
+}
+
+.auth-input:focus {
+  outline: 2px solid #e50914;
+}
+
+/* Button */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background: #f6121d;
+}
+
+/* Uyarı mesajı */
+.auth-message {
+  margin-top: 12px;
+  color: #ff6b6b;
+}
+
+/* Alt kayıt/giriş yönlendirme */
+.auth-switch {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.auth-switch span {
+  color: white;
+  cursor: pointer;
+}
+
+.auth-switch span:hover {
+  text-decoration: underline;
+}
